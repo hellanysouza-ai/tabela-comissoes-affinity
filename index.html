@@ -408,39 +408,40 @@
 
 
   @media print {
-  
-    body { background: #3D1F52 !important; margin: 0; padding: 0; }
-    .page-wrap { padding: 24px 20px 40px; max-width: 100%; }
-    /* section display controlled by JS */
-    .section-title { color: #C9913A !important; font-size: 14px; margin-bottom: 10px; }
-    .table-wrap { display: block; break-inside: avoid; margin-bottom: 20px; border-radius: 8px; overflow: hidden; }
-    .mobile-cards { display: none !important; }
-    table { width: 100%; border-collapse: collapse; font-size: 10px; }
-    thead tr { background: #f9f3ff !important; }
-    thead th { color: #1A1A1A !important; padding: 7px 8px; font-size: 9px; }
-    tbody tr { border-bottom: 0.5px solid rgba(50,20,70,0.08) !important; }
-    tbody tr:nth-child(even) { background: #faf5fc !important; }
-    td { padding: 6px 8px; font-size: 10px; color: #2A1030 !important; }
-    td.empresa { color: #1A0822 !important; font-weight: 600; }
-    td.total { color: #1A1A1A !important; font-size: 13px; font-weight: 700; }
-    td.parcela { color: #5A3060 !important; text-align: center; }
-    td.parcela.highlight { color: #1A1A1A !important; font-weight: 700; }
-    td.parcela.dim { color: rgba(50,20,70,0.25) !important; }
-    td.obs { color: rgba(50,20,70,0.6) !important; font-style: italic; font-size: 9px; }
-    .page-header { border-bottom: 1px solid rgba(201,145,58,0.4) !important; margin-bottom: 16px; padding-bottom: 12px; }
-    .logo-text { color: #ffffff !important; font-size: 16px; }
-    .logo-text span { color: #C9913A !important; }
-    .logo-icon { background: #C9913A !important; color: #1A1A1A !important; }
-    .page-title { font-size: 22px; color: #ffffff !important; }
-    .page-title em { color: #C9913A !important; }
-    .header-meta .vigencia { color: #C9913A !important; }
-    .header-meta .subtitle { color: rgba(255,255,255,0.6) !important; }
-    .conditions { background: rgba(255,255,255,0.05) !important; border: 0.5px solid rgba(201,145,58,0.3) !important; margin-top: 20px; padding: 14px; border-radius: 8px; }
-    .conditions h3 { color: #C9913A !important; font-size: 13px; }
-    .conditions li { color: rgba(255,255,255,0.7) !important; font-size: 10px; }
-    .conditions .highlight-rule { background: rgba(201,145,58,0.1) !important; color: #ffffff !important; font-size: 10px; }
-    @page { size: A4 landscape; margin: 10mm; }
-  }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #3D1F52 !important; margin: 0; padding: 0; }
+  .page-wrap { padding: 24px 20px 40px; max-width: 100%; }
+  .section-nav, .deco, [style*="position:fixed"] { display: none !important; }
+  .section-block { display: block !important; }
+  .mobile-cards { display: none !important; }
+  .table-wrap { display: block !important; background: #ffffff !important; break-inside: auto; margin-bottom: 20px; border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 10px; }
+  thead tr { background: #f9f3ff !important; }
+  thead th { color: #3D1F52 !important; padding: 7px 8px; font-size: 9px; }
+  tbody tr { border-bottom: 0.5px solid rgba(50,20,70,0.08) !important; }
+  tbody tr:nth-child(even) { background: #faf5fc !important; }
+  td { padding: 6px 8px; font-size: 10px; color: #1A0822 !important; }
+  td.empresa { color: #1A0822 !important; font-weight: 600; }
+  td.empresa small { display: block; font-size: 9px; color: rgba(50,20,70,0.5) !important; }
+  td.total { color: #3D1F52 !important; font-size: 13px; font-weight: 700; text-align: center; }
+  td.parcela { text-align: center; }
+  td.parcela.highlight { color: #3D1F52 !important; font-weight: 700; }
+  td.parcela.dim { color: rgba(50,20,70,0.2) !important; }
+  td.obs { font-size: 9px; color: rgba(50,20,70,0.6) !important; font-style: italic; }
+  .section-title { color: #C9913A !important; font-size: 14px; margin-bottom: 10px; }
+  .page-header { border-bottom: 0.5px solid rgba(201,145,58,0.4) !important; margin-bottom: 16px; padding-bottom: 12px; }
+  .logo-text { color: #ffffff !important; }
+  .logo-text span { color: #C9913A !important; }
+  .logo-icon { background: #C9913A !important; color: #3D1F52 !important; }
+  .page-title { font-size: 22px !important; color: #ffffff !important; }
+  .page-title em { color: #C9913A !important; }
+  .header-meta .vigencia { color: #C9913A !important; }
+  .header-meta .subtitle { color: rgba(255,255,255,0.6) !important; }
+  .conditions { background: rgba(255,255,255,0.05) !important; border: 0.5px solid rgba(201,145,58,0.3) !important; border-radius: 8px; padding: 14px; margin-top: 20px; }
+  .conditions h3 { color: #C9913A !important; font-size: 13px; }
+  .conditions li { color: rgba(255,255,255,0.7) !important; font-size: 10px; }
+  @page { size: A4 portrait; margin: 8mm; }
+}
 
 
 </style>
